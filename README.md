@@ -24,7 +24,7 @@
 
 | :--- | :--- | :--- | :--- |
 
-| Baseline Resistance | $R\_0$ | 0.25066 | $\\Omega$ |
+| Baseline Resistance | $R\_0$ | 0.25066 | $\\Omega$ |++
 
 | Full-Scale Resistance (100 kPa) | $R\_{\\text{max}}$ | 0.25083 | $\\Omega$ |
 
@@ -46,3 +46,23 @@
 
 \- \*\*Response:\*\* Highly linear electromechanical output
 
+
+
+# Phase 3: Wheatstone Bridge Integration & Voltage Sensitivity Analysis
+
+## Overview
+Integration of a full Wheatstone bridge circuit with the MEMS piezoresistive pressure sensor using COMSOL Multiphysics v6.1 (`Electrical Circuit` interface).
+
+## Simulation Parameters & Results
+- **Excitation Voltage ($V_{in}$):** 5.0 V
+- **Pressure Range ($P_{app}$):** 0 to 100 kPa
+- **Baseline Resistance ($R_0$):** 0.25066 Ω
+- **Piezoresistive Sensitivity ($S$):** $6.78 \times 10^{-6}\text{ kPa}^{-1}$
+- **Max Differential Output ($V_{out,max}$):** 3.39 mV
+- **Total Bridge Sensitivity ($S_{bridge}$):** $0.00678\text{ mV/V/kPa}$ ($6.78\ \mu\text{V/V/kPa}$)
+
+## Bridge Topology & Circuit Configuration
+- **Full Wheatstone Bridge** connected via Nodes 0, 1, 2, 3
+- **Tension Arms ($R_1, R_4$):** $R_0 (1 + S \cdot P_{app})$
+- **Compression Arms ($R_2, R_3$):** $R_0 (1 - S \cdot P_{app})$
+- **Differential Output Formula:** $V_{out} = V_3 - V_2$
