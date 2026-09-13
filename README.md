@@ -66,3 +66,17 @@ Integration of a full Wheatstone bridge circuit with the MEMS piezoresistive pre
 - **Tension Arms ($R_1, R_4$):** $R_0 (1 + S \cdot P_{app})$
 - **Compression Arms ($R_2, R_3$):** $R_0 (1 - S \cdot P_{app})$
 - **Differential Output Formula:** $V_{out} = V_3 - V_2$
+
+
+
+# Phase 4: Thermal Drift & Sensitivity Analysis
+
+## Overview
+Evaluated ambient temperature variations (293.15 K to 353.15 K) on sensor baseline and piezoresistive sensitivity using full-bridge multiphysics modeling.
+
+## Thermal Performance Metrics
+- **Thermal Coefficient of Offset (TCO):** $0\ \mu\text{V/K}$ (Self-compensated full-bridge)
+- **Thermal Coefficient of Sensitivity (TCS):** $-0.18\%/\text{K}$ ($-1800\text{ ppm/K}$)
+- **$V_{out,max}$ at 293.15 K (20°C):** 3.39 mV
+- **$V_{out,max}$ at 353.15 K (80°C):** 3.024 mV
+- **Sensitivity Loss Over 60 K Span:** 10.8%
