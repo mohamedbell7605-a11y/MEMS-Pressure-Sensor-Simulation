@@ -80,3 +80,16 @@ Evaluated ambient temperature variations (293.15 K to 353.15 K) on sensor baseli
 - **$V_{out,max}$ at 293.15 K (20°C):** 3.39 mV
 - **$V_{out,max}$ at 353.15 K (80°C):** 3.024 mV
 - **Sensitivity Loss Over 60 K Span:** 10.8%
+
+
+# Phase 5: Signal Conditioning & Amplification
+
+## Overview
+Integrated a Voltage-Controlled Voltage Source (VCVS) stage into the `Electrical Circuit` interface to model an Instrumentation Amplifier, boosting the Wheatstone bridge output to a standard microcontroller input range ($0–5\text{ V}$).
+
+## Circuit & Conditioning Specifications
+- **Amplification Stage:** Voltage-Controlled Voltage Source (VCVS)
+- **Voltage Gain ($A_v$):** 1475
+- **Input Differential Range:** $0 - 3.39\text{ mV}$
+- **Amplified Output Range ($20^\circ\text{C}$):** $0 - 5.0\text{ V}$
+- **Output Load Resistance ($R_5$):** $1\text{ M}\Omega$
